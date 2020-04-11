@@ -34,6 +34,15 @@ class SpotDetailViewController: UIViewController {
         addressField.text = spot.address
     }
     
+    func leaveViewContoller() {
+        let isPresentingInAddMode = presentingViewController is UINavigationController
+        if isPresentingInAddMode {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
     @IBAction func photoButtonPressed(_ sender: UIButton) {
     }
     
@@ -41,6 +50,13 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        spot.saveData { success in
+            if success {
+                self.leaveViewContoller()
+            } else {
+                print("*** ERROR: Could not leave this view controller because data wasn't saved.")
+            }
+        }
     }
     
     @IBAction func lookupPlacePressed(_ sender: UIBarButtonItem) {
@@ -50,12 +66,7 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMode = presentingViewController is UINavigationController
-        if isPresentingInAddMode {
-            dismiss(animated: true, completion: nil)
-        } else {
-            navigationController?.popViewController(animated: true)
-        }
+        leaveViewContoller()
     }
 }
 
@@ -63,8 +74,8 @@ extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        spot.name = place.name ?? ""
-        spot.address = place.formattedAddress ?? ""
+        spot.name = place.name ?? "unknown place"
+        spot.address = place.formattedAddress ?? "unknown address"
         spot.coordinate = place.coordinate
         dismiss(animated: true, completion: nil)
         updateUserInterface()
