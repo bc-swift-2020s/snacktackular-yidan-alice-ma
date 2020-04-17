@@ -459,12 +459,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click To Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s0-QT-pLx">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-JI-Tue">
                                                     <rect key="frame" x="97" y="24" width="220" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -480,26 +474,41 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.50404002568493156" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="KZW-R7-Rli" eventType="touchUpInside" id="RBv-mz-UdE"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-ns-tJh">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-ns-tJh">
                                                             <rect key="frame" x="43.5" y="0.0" width="41.5" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.50404002569999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="KZW-R7-Rli" eventType="touchUpInside" id="qau-h0-Kkg"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reL-fi-mMA">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reL-fi-mMA">
                                                             <rect key="frame" x="87" y="0.0" width="42" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.50404002569999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="KZW-R7-Rli" eventType="touchUpInside" id="kia-KX-eoy"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nv-oG-lo4">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nv-oG-lo4">
                                                             <rect key="frame" x="131" y="0.0" width="41.5" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.50404002569999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="KZW-R7-Rli" eventType="touchUpInside" id="2kF-oN-LDs"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-KV-5HT">
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-KV-5HT">
                                                             <rect key="frame" x="174.5" y="0.0" width="41.5" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.50404002569999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="KZW-R7-Rli" eventType="touchUpInside" id="k2J-yX-ru3"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -507,6 +516,12 @@
                                                         <constraint firstAttribute="width" constant="216" id="weW-Y9-XKF"/>
                                                     </constraints>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click To Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s0-QT-pLx">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2s0-QT-pLx" firstAttribute="top" secondItem="ZuT-Ii-6XV" secondAttribute="topMargin" id="44R-73-Tix"/>
@@ -680,6 +695,11 @@
                         <outlet property="reviewTitle" destination="M7e-Eo-Q1n" id="JWD-Dn-PzN"/>
                         <outlet property="reviewView" destination="IZP-kb-TPN" id="YdG-Kh-Nll"/>
                         <outlet property="saveBarButton" destination="kJQ-vW-JHA" id="oMl-Am-7Yc"/>
+                        <outletCollection property="starButtonCollection" destination="9fb-HF-7mu" collectionClass="NSMutableArray" id="apD-1h-zc7"/>
+                        <outletCollection property="starButtonCollection" destination="fZJ-ns-tJh" collectionClass="NSMutableArray" id="eyb-pd-N5G"/>
+                        <outletCollection property="starButtonCollection" destination="reL-fi-mMA" collectionClass="NSMutableArray" id="QHx-nL-SZc"/>
+                        <outletCollection property="starButtonCollection" destination="2nv-oG-lo4" collectionClass="NSMutableArray" id="L28-mE-3MX"/>
+                        <outletCollection property="starButtonCollection" destination="ifO-KV-5HT" collectionClass="NSMutableArray" id="GkM-fB-QsU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sor-1H-Ybh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
