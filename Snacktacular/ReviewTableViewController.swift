@@ -9,7 +9,7 @@
 import UIKit
 
 class ReviewTableViewController: UITableViewController {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var postedByLabel: UILabel!

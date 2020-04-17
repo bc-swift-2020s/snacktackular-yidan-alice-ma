@@ -37,6 +37,7 @@ class SpotsListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getLocation()
         navigationController?.setToolbarHidden(false, animated: false)
         spots.loadData {

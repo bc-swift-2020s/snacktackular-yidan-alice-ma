@@ -62,7 +62,7 @@ class Review {
                     completed(true)
                 }
             }
-        } else {3
+        } else {
             var ref: DocumentReference? = nil // Let firestore create an new documentID
             ref = db.collection("spots").document(spot.documentID).collection("reviews").addDocument(data: dataToSave) { error in
                 if let error = error {
